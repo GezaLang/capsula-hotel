@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hop INN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Simulation Modal -->
+<div id="simulationModal" class="modal">
+    <div class="modal-content">
+        <h2>Simulation Notice</h2>
+        <p>This website is part of a university hotel management simulation. No real bookings can be made.</p>
+        <button onclick="closeModal()">I Understand</button>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-inner">
+        
+        <!-- Left: Logo + Name -->
+        <div class="brand">
+    <img src="images/logo.jpg" alt="Hop INN Logo" class="nav-logo">
+    <div class="brand-text">
+        <span class="brand-slogan">Hop in. Recharge.</span>
+    </div>
+</div>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links">
+            <li><a href="#rooms">Capsules</a></li>
+            <li><a href="#lounge">Lounge</a></li>
+            <li><a href="#inspiration">Inspiration</a></li>
+            <li><a href="#rooms" class="nav-btn">Book Now</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content center-hero">
+        <h1>Hop INN</h1>
+
+        <p class="subtext">
+            A smart capsule hotel near Ingolstadt’s main train station.
+            Designed for travelers who value privacy, comfort and fair pricing 
+            with the potential of meeting inspiring people.
+        </p>
+
+        <p class="subtext">
+            Bookable by the hour or overnight • Automated QR access • Showers & lounge included
+        </p>
+
+        <a href="#rooms" class="btn">Explore Capsules</a>
+    </div>
+</section>
+
+<!-- ROOMS SECTION -->
+<section id="rooms" class="rooms">
+    <h2>Choose Your Smart Stay</h2>
+
+    <div class="room-grid">
+
+        <!-- Smart Capsule -->
+        <div class="room-card">
+            <img src="images/smart_capsule.jpg" class="room-img" alt="Smart Capsule">
+            <h3>Smart Capsule</h3>
+            <ul>
+                <li>Premium single bed</li>
+                <li>Charging ports & lighting</li>
+                <li>Secure lockers</li>
+                <li>Shower access</li>
+                <li>Soundproof capsules</li>
+                <li>Perfect for short stays</li>
+            </ul>
+            <p class="price">From €39 / night</p>
+            <button onclick="fakeBooking()">Book Now</button>
+        </div>
+
+        <!-- Duo Smart Pod -->
+        <div class="room-card">
+            <img src="images/duo_capsule.jpg" class="room-img" alt="Duo Smart Pod">
+            <h3>Duo Smart Pod</h3>
+            <ul>
+                <li>Double bed capsule</li>
+                <li>Charging ports & lighting</li>
+                <li>Secure lockers</li>
+                <li>Shower access</li>
+                <li>Soundproof capsules</li>
+                <li>Small smart TV</li>
+                <li>Extra storage</li>
+                <li>Ideal for couples</li>
+                <li>Enhanced comfort</li>
+            </ul>
+            <p class="price">From €69 / night</p>
+            <button onclick="fakeBooking()">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- LOUNGE SECTION -->
+<section id="lounge" class="lounge">
+    <h2>Foyer & Lounge</h2>
+    <p>
+        A welcoming foyer and modern co-working lounge designed for networking,
+        relaxing and recharging before or after your stay.
+    </p>
+
+    <div class="lounge-gallery">
+        <img src="images/foyer.jpg" alt="Foyer Area">
+        <img src="images/lounge.jpg" alt="Lounge and Co-Working Space">
+    </div>
+</section>
+
+<!-- INSPIRATION SECTION -->
+<section id="inspiration" class="inspiration">
+    <div class="overlay"></div>
+    <div class="inspiration-content">
+        <h2>Our Inspiration</h2>
+
+        <p>
+            Hop INN is inspired by the efficiency of Japanese capsule hotels
+            and the dynamic business atmosphere of Ingolstadt.
+        </p>
+
+        <p>
+            We believe modern travel should be flexible, affordable and smart.
+            Whether you're arriving late by train, taking a break from a long drive,
+            or visiting for business - you deserve a real bed, a refreshing shower,
+            and a calm, private space.
+        </p>
+
+        <p>
+            At the same time, our foyer and co-working lounge create space
+            for connection and exchange. Meet fellow travelers,
+            students, professionals and explorers - if you want to.
+        </p>
+
+        <p>
+            Hop INN combines all: privacy and community, 
+            comfort and simplicity & 
+            technology and hospitality.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Hopp INN Ingolstadt | University Simulation Project</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

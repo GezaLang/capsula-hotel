@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Simulation Modal -->
 <div id="simulationModal" class="modal">
-    <div class="modal-content">
-        <h2>Simulation Notice</h2>
-        <p>This website is part of a university hotel management simulation. No real bookings can be made.</p>
-        <button onclick="closeModal()">I Understand</button>
+    <div class="modal-content simulation">
+        <div class="sim-icon">ℹ️</div>
+        <h2>University Simulation Project</h2>
+        <p>
+            Hop INN is part of a university hotel management simulation.
+            No real bookings are processed and no payments are taken.
+        </p>
+        <button class="confirm-btn" onclick="closeModal()">Continue to Website</button>
     </div>
 </div>
 
@@ -74,15 +79,20 @@
             <img src="images/smart_capsule.jpg" class="room-img" alt="Smart Capsule">
             <h3>Smart Capsule</h3>
             <ul>
-                <li>Premium single bed</li>
-                <li>Charging ports & lighting</li>
-                <li>Secure lockers</li>
-                <li>Shower access</li>
-                <li>Soundproof capsules</li>
-                <li>Perfect for short stays</li>
+                    <li>Premium single bed</li>
+                    <li>Integrated charging ports</li>
+                    <li>Personal secure locker</li>
+                    <li>Access to modern shower facilities</li>
+                    <li>Sound-insulated for maximum privacy</li>
+                    <li>In-capsule mini fridge</li>
+                    <li>Privacy glass with adjustable opacity</li>
+                    <li>Ideal for short stays or business trips</li>
             </ul>
-            <p class="price">From €xx / night</p>
-            <button onclick="fakeBooking()">Book Now</button>
+            <p class="price">
+            From €39 / night<br>
+            <span class="hourly">€10 per hour</span>
+            </p>
+            <button onclick="openBooking()">Book Now</button>
         </div>
 
         <!-- Duo Smart Pod -->
@@ -90,18 +100,18 @@
             <img src="images/duo_capsule.jpg" class="room-img" alt="Duo Smart Pod">
             <h3>Duo Smart Pod</h3>
             <ul>
-                <li>Double bed capsule</li>
-                <li>Charging ports & lighting</li>
-                <li>Secure lockers</li>
-                <li>Shower access</li>
-                <li>Soundproof capsules</li>
-                <li>Small smart TV</li>
-                <li>Extra storage</li>
-                <li>Ideal for couples</li>
-                <li>Enhanced comfort</li>
+                    <li>All features of the Smart Capsule, plus:</li>
+                    <li>Comfortable double bed</li>
+                    <li>Built-in smart TV</li>
+                    <li>Additional storage space</li>
+                    <li>Extra room for enhanced comfort</li>
+                    <li>Perfect for couples or shared stays</li>
             </ul>
-            <p class="price">From €xx / night</p>
-            <button onclick="fakeBooking()">Book Now</button>
+            <p class="price">
+            From €59 / night<br>
+            <span class="hourly">€13 per hour</span>
+            </p>
+            <button onclick="openBooking()">Book Now</button>
         </div>
 
     </div>
@@ -161,8 +171,8 @@
 
     <div class="contact-info">
         <p><strong>Email:</strong> hopinningolstadt@gmail.com</p>
-        <p><strong>Phone:</strong> TBD</p>
-        <p><strong>Location:</strong> Münchnerstraße xx, 85049 Ingolstadt</p>
+        <p><strong>Phone:</strong> 0152 12345678</p>
+        <p><strong>Location:</strong> Münchnerstraße 1234, 85049 Ingolstadt</p>
     </div>
 
     <form class="contact-form">
@@ -179,9 +189,9 @@
     <p>
         Hopp INN Ingolstadt<br>
         University Simulation Project<br>
-        Address: Münchnerstraße xx, 85049 Ingolstadt, Germany<br>
-        Email: info@hopinn.de<br>
-        Phone: TBD<br>
+        Address: Münchnerstraße 1234, 85049 Ingolstadt, Germany<br>
+        Email: hopinningolstadt@gmail.com<br>
+        Phone: 0152 12345678<br>
         Responsible for content: Max Mustermann
     </p>
 </section>
@@ -191,5 +201,56 @@
 </footer>
 
 <script src="js/script.js"></script>
+
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content fancy">
+        <h2>Book Your Stay</h2>
+
+        <div class="booking-type">
+            <button onclick="setBookingType('overnight')" id="overnightBtn" class="active">Overnight</button>
+            <button onclick="setBookingType('hourly')" id="hourlyBtn">Hourly</button>
+        </div>
+
+        <div id="overnightFields">
+            <label>Check-in Date</label>
+            <input type="date" id="checkin">
+
+            <label>Check-out Date</label>
+            <input type="date" id="checkout">
+        </div>
+
+        <div id="hourlyFields" style="display:none;">
+            <label>Select Date</label>
+            <input type="date" id="hourDate">
+
+            <label>Start Time</label>
+            <input type="time" id="startTime">
+
+            <label>Duration (hours)</label>
+            <select id="duration">
+                <option value="1">2 hour</option>
+                <option value="2">4 hours</option>
+                <option value="3">6 hours</option>
+            </select>
+        </div>
+
+        <button class="confirm-btn" onclick="confirmBooking()">Confirm Booking</button>
+        <button class="close-btn" onclick="closeBooking()">Cancel</button>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    <div class="modal-content success">
+        <h2>🎉 Booking Confirmed!</h2>
+        <p>Your smart capsule is reserved.</p>
+        <p>You will receive a QR access code via email.</p>
+        <button onclick="closeSuccess()">Close</button>
+    </div>
+</div>
+
+
 </body>
 </html>

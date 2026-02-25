@@ -81,3 +81,7 @@ function setBookingType(type) {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("simulationModal").style.display = "flex";
 });
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}

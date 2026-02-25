@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hop Ingo</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body>  ^
 
 <!-- Simulation Modal -->
 <div id="simulationModal" class="modal">
@@ -36,17 +38,22 @@
 
         <!-- Desktop Menu -->
         <ul class="nav-links">
-            <li><a href="#rooms">Capsules</a></li>
-            <li><a href="#lounge">Lounge</a></li>
-            <li><a href="#inspiration">Inspiration</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#rooms" class="nav-btn">Book Now</a></li>
-        </ul>
+         <li><a href="#rooms">Capsules</a></li>
+         <li><a href="#room-details">Safety</a></li>
+         <li><a href="#lounge">Lounge</a></li>
+         <li><a href="#inspiration">Inspiration</a></li>
+         <li><a href="#contact">Contact</a></li>
+         <li><a href="#rooms" class="nav-btn">Book Now</a></li>
+</ul>
+
+</div>
 
         <!-- Mobile Menu Button -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     </div>
+
+    
 </nav>
 
 <section class="hero">
@@ -76,8 +83,12 @@
 
         <!-- Smart Capsule -->
         <div class="room-card">
-            <img src="images/smart_capsule.jpg" class="room-img" alt="Smart Capsule">
-            <h3>Smart Capsule</h3>
+              <div class="room-top">
+        <img src="images/smart_capsule.jpg" class="room-img" alt="Smart Capsule">
+
+        <div class="room-hover">
+            <p>Premium single capsule designed for smart short stays.</p>
+
             <ul>
                     <li>Premium single bed</li>
                     <li>Integrated charging ports</li>
@@ -85,9 +96,15 @@
                     <li>Access to modern shower facilities</li>
                     <li>Sound-insulated for maximum privacy</li>
                     <li>In-capsule mini fridge</li>
+                    <li>Enough space to sit upright comfortably</li>
                     <li>Privacy glass with adjustable opacity</li>
                     <li>Ideal for short stays or business trips</li>
-            </ul>
+                     </ul>
+        </div>
+    </div>
+
+    <h3>Smart Capsule</h3>
+
             <p class="price">
             From €30 / night<br>
             <span class="hourly">5€ for 2 hours + 3€ per additional hour</span>
@@ -97,8 +114,12 @@
 
         <!-- Duo Smart Pod -->
         <div class="room-card">
-            <img src="images/duo_capsule.jpg" class="room-img" alt="Duo Smart Pod">
-            <h3>Duo Smart Pod</h3>
+              <div class="room-top">
+        <img src="images/duo_capsule.jpg" class="room-img" alt="Duo Smart Pod">
+
+        <div class="room-hover">
+            <p>Premium double capsule designed for couples or shared comfort.</p>
+
             <ul>
                     <li>All features of the Smart Capsule, plus:</li>
                     <li>Comfortable double bed</li>
@@ -106,12 +127,52 @@
                     <li>Additional storage space</li>
                     <li>Extra room for enhanced comfort</li>
                     <li>Perfect for couples or shared stays</li>
-            </ul>
+                </ul>
+        </div>
+    </div>
+
+    <h3>Duo Smart Pod</h3>
             <p class="price">
             From €50 / night<br>
             <span class="hourly">10€ for 2 hours + 6€ per additional hour</span>
             </p>
             <button onclick="openBooking()">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ROOM DETAILS & SECURITY SECTION -->
+<section id="room-details" class="room-details">
+    <h2>Privacy & Security: Our hotel is designed for peace of mind</h2>
+
+    <div class="details-container">
+
+        <div class="details-text">
+            <h3>Your Safety Comes First</h3>
+
+            <p>
+                At Hop Ingo, privacy and security are not extras: they are our foundation!
+            </p>
+
+            <ul>
+                <li>Individual QR-code access: only you can enter your capsule</li>
+                <li>No direct visibility from outside: privacy glass + curtain layer</li>
+                <li>24/7 monitored public areas (never inside capsules)</li>
+                <li>Lockable personal storage inside every capsule</li>
+                <li>Sound-insulated walls for maximum discretion</li>
+                <li>ZERO tolerance for any unauthorized access or disturbances</li>
+                <li>Safe environment especially designed for solo female travelers</li>
+            </ul>
+
+            <p>
+                No matter whether you are arriving late at night or staying alone,
+                you can feel protected, undisturbed and fully in control.
+            </p>
+        </div>
+
+        <div class="details-image">
+            <img src="images/security.jpg" alt="Secure Capsule Interior">
         </div>
 
     </div>
@@ -134,6 +195,12 @@
 <!-- INSPIRATION SECTION -->
 <section id="inspiration" class="inspiration">
     <div class="overlay"></div>
+
+    <div class="inspiration-mobile-img">
+        <img src="images/inspiration.jpg" alt="Inspiration">
+    </div>
+
+    <div class="inspiration-content">
     <div class="inspiration-content">
         <h2>Our Inspiration</h2>
 
@@ -160,6 +227,27 @@
             comfort and simplicity & 
             technology and hospitality.
         </p>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+
+<section class="social-media">
+    <div class="social-inner">
+        <h2>Follow Our Journey</h2>
+        <p>Daily inspiration, new setups & behind the scenes.</p>
+
+        <div class="social-links">
+            <a href="https://instagram.com/hopingo.ingolstadt" target="_blank">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="https://tiktok.com/hopingo.ingolstadt" target="_blank">
+                <i class="fab fa-tiktok"></i>
+                TikTok
+            </a>
+        </div>
     </div>
 </section>
 

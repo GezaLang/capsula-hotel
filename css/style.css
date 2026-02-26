@@ -166,7 +166,7 @@ body {
 /* ROOMS */
 .rooms {
     padding: 100px 10%;
-    background: #111827;
+    background: #0f172a;
     text-align: center;
 }
 
@@ -240,7 +240,7 @@ body {
 /* FOOTER */
 footer {
     padding: 30px;
-    background: #111827;
+    background: #0f172a;
     text-align: center;
 }
 
@@ -580,7 +580,7 @@ section.visible {
 .room-details {
     height: 100vh;
     scroll-snap-align: start;
-    background: #111827;   /* same as rooms */
+    background: #0f172a;   /* same as rooms */
     padding: 80px 8%;
     display: flex;
     flex-direction: column;
@@ -682,7 +682,7 @@ section.visible {
 .room-hover {
     position: absolute;
     inset: 0;
-    background: #111827;
+    background: #0f172a;
     padding: 20px;
     opacity: 0;
     transition: 0.3s ease;
@@ -808,12 +808,21 @@ section.visible {
     height: auto;
     min-height: auto;
     padding: 80px 6%;
+}
+
+/* Hero keeps image */
+.hero {
+    background: url('../images/capsules.jpg') center/cover no-repeat;
+}
+
+/* Inspiration forced to solid color */
+.inspiration {
     background: #0f172a;
 }
-.inspiration {
-    background: #0f172a;;
-    text-align: center;
-}
+
+.inspiration .overlay {
+        display: none;
+    }
 
 .inspiration-mobile-img {
     display: block;
@@ -863,5 +872,17 @@ section.visible {
     }
         .social-icons {
         display: none;
+    }
+
+        .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        z-index: 1100;
+    }
+
+    .nav-inner {
+        width: 100%;
     }
 }
